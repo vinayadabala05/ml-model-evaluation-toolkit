@@ -1,16 +1,18 @@
 # ML Model Evaluation & Data-Quality Toolkit
 
-A clean, practical Python toolkit for evaluating classification models and checking data quality.
+Simple Python toolkit to evaluate classification models and run basic data quality checks.
 
-## What this project does
+**Status:** Completed (learning project)
 
-- Implements a classification baseline with **stratified holdout evaluation**
-- Fits preprocessing (scaling) **only on training data** to avoid data leakage
-- Reports standard metrics: Accuracy, Precision, Recall, F1, ROC-AUC, Confusion Matrix
-- Performs data quality checks (non-finite values, class distribution, train/test overlap)
-- Includes automated tests using **pytest**
+## What it does
 
-## Project Structure
+- Stratified train/test split
+- Scaling fitted only on training data (avoids leakage)
+- Metrics: Accuracy, Precision, Recall, F1, ROC-AUC, Confusion Matrix
+- Data checks for non-finite values, class balance, and train/test overlap
+- Pytest tests included
+
+## Project structure
 
 ```
 ml-model-evaluation-toolkit/
@@ -32,15 +34,12 @@ python -m src.evaluation
 pytest tests/ -v
 ```
 
-## Key Features
+## Notes
 
-- Stratified train/test split
-- Preprocessing pipeline that fits only on train set
-- Full classification metrics report
-- Data quality checks (NaN/Inf, class counts, index overlap)
-- Automated unit tests for metric ranges and split integrity
+Currently uses synthetic data for demonstration.  
+Next improvement: add a real public dataset and compare a couple of models.
 
 ## Author
 
-**Vinay Adabala**  
+Vinay Adabala  
 GitHub: [vinayadabala05](https://github.com/vinayadabala05)
